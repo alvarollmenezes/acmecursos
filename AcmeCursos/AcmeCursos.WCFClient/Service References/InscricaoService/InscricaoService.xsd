@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:3139/InscricaoService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/AcmeCursos.Models" />
+  <xs:element name="CadastrarEstudante">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/AcmeCursos.Models" minOccurs="0" name="inscricao" nillable="true" type="q1:Inscricao" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CadastrarEstudanteResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetByEstudanteId">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="estudanteId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetByEstudanteIdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/AcmeCursos.Models" minOccurs="0" name="GetByEstudanteIdResult" nillable="true" type="q2:ArrayOfInscricao" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
