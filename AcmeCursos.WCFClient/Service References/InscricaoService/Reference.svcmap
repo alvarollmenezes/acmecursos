@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="3f720be7-9735-4fde-81ae-6eb481972cad" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>false</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:3139/InscricaoService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="InscricaoService.xsd" MetadataType="Schema" ID="b491e0c3-9c24-4111-89cd-4a2d19a352a8" SourceId="1" SourceUrl="http://localhost:3139/InscricaoService.svc?xsd=xsd0" />
+    <MetadataFile FileName="InscricaoService1.xsd" MetadataType="Schema" ID="0967df17-1541-41b0-91cc-5c9d3000f98f" SourceId="1" SourceUrl="http://localhost:3139/InscricaoService.svc?xsd=xsd1" />
+    <MetadataFile FileName="InscricaoService2.xsd" MetadataType="Schema" ID="b9996773-667e-4412-a42d-14942d281bd3" SourceId="1" SourceUrl="http://localhost:3139/InscricaoService.svc?xsd=xsd2" />
+    <MetadataFile FileName="InscricaoService.wsdl" MetadataType="Wsdl" ID="78a03e2e-88f3-4395-a233-ea4972c39566" SourceId="1" SourceUrl="http://localhost:3139/InscricaoService.svc?wsdl" />
+    <MetadataFile FileName="InscricaoService.disco" MetadataType="Disco" ID="5baf4edf-afe2-4651-a42e-0b5c70f0a5e2" SourceId="1" SourceUrl="http://localhost:3139/InscricaoService.svc?disco" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/AcmeCursos.Models" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/AcmeCursos.Models" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="ArrayOfEstudante">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Estudante" nillable="true" type="tns:Estudante" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfEstudante" nillable="true" type="tns:ArrayOfEstudante" />
+  <xs:complexType name="Estudante">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="DataMatricula" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="Inscricoes" nillable="true" type="tns:ArrayOfInscricao" />
+      <xs:element minOccurs="0" name="Nome" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Sobrenome" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Estudante" nillable="true" type="tns:Estudante" />
+  <xs:complexType name="ArrayOfInscricao">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Inscricao" nillable="true" type="tns:Inscricao" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfInscricao" nillable="true" type="tns:ArrayOfInscricao" />
+  <xs:complexType name="Inscricao">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Curso" nillable="true" type="tns:Curso" />
+      <xs:element minOccurs="0" name="CursoId" type="xs:int" />
+      <xs:element minOccurs="0" name="DataInscricao" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Estudante" nillable="true" type="tns:Estudante" />
+      <xs:element minOccurs="0" name="EstudanteId" type="xs:int" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Inscricao" nillable="true" type="tns:Inscricao" />
+  <xs:complexType name="Curso">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="DataLimiteInscricao" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Descricao" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="Inscricoes" nillable="true" type="tns:ArrayOfInscricao" />
+      <xs:element minOccurs="0" name="Nome" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Professores" nillable="true" type="tns:ArrayOfProfessor" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Curso" nillable="true" type="tns:Curso" />
+  <xs:complexType name="ArrayOfProfessor">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Professor" nillable="true" type="tns:Professor" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfProfessor" nillable="true" type="tns:ArrayOfProfessor" />
+  <xs:complexType name="Professor">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Cursos" nillable="true" type="tns:ArrayOfCurso" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="Nome" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Sobrenome" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Titulacao" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Professor" nillable="true" type="tns:Professor" />
+  <xs:complexType name="ArrayOfCurso">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Curso" nillable="true" type="tns:Curso" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCurso" nillable="true" type="tns:ArrayOfCurso" />
+</xs:schema>
