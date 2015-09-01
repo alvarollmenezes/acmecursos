@@ -7,12 +7,12 @@
     <ProductVersion>
     </ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{1477FE83-BD66-40B1-82B7-4C8308DD4040}</ProjectGuid>
+    <ProjectGuid>{24D3D7C5-5633-47F8-A266-E8747F565F9F}</ProjectGuid>
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>AcmeCursos.WCFClient</RootNamespace>
-    <AssemblyName>AcmeCursos.WCFClient</AssemblyName>
+    <RootNamespace>AcmeCursos</RootNamespace>
+    <AssemblyName>AcmeCursos</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <MvcBuildViews>false</MvcBuildViews>
     <UseIISExpress>true</UseIISExpress>
@@ -43,9 +43,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="AutoMapper">
-      <HintPath>..\packages\AutoMapper.4.0.4\lib\net45\AutoMapper.dll</HintPath>
-    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -162,7 +159,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="App_Start\AutoMapper.cs" />
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\IdentityConfig.cs" />
@@ -175,35 +171,32 @@
     <Compile Include="Controllers\InscricaoController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\ProfessorController.cs" />
+    <Compile Include="DAL\AppDBContext.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201508291504402_InitialCreate.cs" />
+    <Compile Include="Migrations\201508291504402_InitialCreate.Designer.cs">
+      <DependentUpon>201508291504402_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201508291528076_Cursos.cs" />
+    <Compile Include="Migrations\201508291528076_Cursos.Designer.cs">
+      <DependentUpon>201508291528076_Cursos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201508291548053_Inscricoes.cs" />
+    <Compile Include="Migrations\201508291548053_Inscricoes.Designer.cs">
+      <DependentUpon>201508291548053_Inscricoes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201508291615386_Professores.cs" />
+    <Compile Include="Migrations\201508291615386_Professores.Designer.cs">
+      <DependentUpon>201508291615386_Professores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Service References\CursoService\Reference.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Compile>
-    <Compile Include="Service References\EstudanteService\Reference.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Compile>
-    <Compile Include="Service References\InscricaoService\Reference.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Compile>
-    <Compile Include="Service References\ProfessorService\Reference.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Compile>
     <Compile Include="Startup.cs" />
-    <Compile Include="Util\ObjectExtensions.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
@@ -226,69 +219,6 @@
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
     <Content Include="Scripts\_references.js" />
-    <Content Include="Service References\CursoService\AcmeCursos.WCFClient.CursoService.Curso.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <None Include="Service References\CursoService\CursoService.disco" />
-    <None Include="Service References\CursoService\configuration91.svcinfo" />
-    <None Include="Service References\CursoService\configuration.svcinfo" />
-    <None Include="Service References\CursoService\Reference.svcmap">
-      <Generator>WCF Proxy Generator</Generator>
-      <LastGenOutput>Reference.cs</LastGenOutput>
-    </None>
-    <Content Include="Service References\EstudanteService\AcmeCursos.WCFClient.EstudanteService.Estudante.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <None Include="Service References\CursoService\CursoService.wsdl" />
-    <None Include="Service References\CursoService\CursoService.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Service References\CursoService\CursoService1.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Service References\CursoService\CursoService2.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Service References\CursoService\CursoService3.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Service References\EstudanteService\EstudanteService.disco" />
-    <None Include="Service References\EstudanteService\configuration91.svcinfo" />
-    <None Include="Service References\EstudanteService\configuration.svcinfo" />
-    <None Include="Service References\EstudanteService\Reference.svcmap">
-      <Generator>WCF Proxy Generator</Generator>
-      <LastGenOutput>Reference.cs</LastGenOutput>
-    </None>
-    <Content Include="Service References\InscricaoService\AcmeCursos.WCFClient.InscricaoService.Inscricao.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <None Include="Service References\InscricaoService\InscricaoService.disco" />
-    <None Include="Service References\InscricaoService\configuration91.svcinfo" />
-    <None Include="Service References\InscricaoService\configuration.svcinfo" />
-    <None Include="Service References\InscricaoService\Reference.svcmap">
-      <Generator>WCF Proxy Generator</Generator>
-      <LastGenOutput>Reference.cs</LastGenOutput>
-    </None>
-    <Content Include="Service References\ProfessorService\AcmeCursos.WCFClient.ProfessorService.Professor.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <None Include="Service References\InscricaoService\InscricaoService.wsdl" />
-    <None Include="Service References\InscricaoService\InscricaoService.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Service References\InscricaoService\InscricaoService1.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Service References\InscricaoService\InscricaoService2.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Service References\ProfessorService\ProfessorService.disco" />
-    <None Include="Service References\ProfessorService\configuration91.svcinfo" />
-    <None Include="Service References\ProfessorService\configuration.svcinfo" />
-    <None Include="Service References\ProfessorService\Reference.svcmap">
-      <Generator>WCF Proxy Generator</Generator>
-      <LastGenOutput>Reference.cs</LastGenOutput>
-    </None>
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -324,47 +254,27 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
-    <Content Include="Views\Shared\DisplayTemplates\_Cursos.cshtml" />
-    <Content Include="Views\Shared\DisplayTemplates\_Inscricoes.cshtml" />
-    <Content Include="Views\Shared\DisplayTemplates\_Professores.cshtml" />
-    <Content Include="Views\Curso\_ProfessoresSelecionados.cshtml" />
+    <Content Include="Views\Estudante\Index.cshtml" />
+    <Content Include="Views\Estudante\Create.cshtml" />
+    <Content Include="Views\Shared\Sucesso.cshtml" />
+    <Content Include="Views\Estudante\Edit.cshtml" />
+    <Content Include="Views\Estudante\Details.cshtml" />
+    <Content Include="Views\Estudante\Delete.cshtml" />
     <Content Include="Views\Curso\Create.cshtml" />
     <Content Include="Views\Curso\Delete.cshtml" />
     <Content Include="Views\Curso\Details.cshtml" />
     <Content Include="Views\Curso\Edit.cshtml" />
     <Content Include="Views\Curso\Index.cshtml" />
-    <Content Include="Views\Estudante\Create.cshtml" />
-    <Content Include="Views\Estudante\Delete.cshtml" />
-    <Content Include="Views\Estudante\Details.cshtml" />
-    <Content Include="Views\Estudante\Edit.cshtml" />
-    <Content Include="Views\Estudante\Index.cshtml" />
+    <Content Include="Views\Inscricao\CadastrarEstudante.cshtml" />
+    <Content Include="Views\Shared\DisplayTemplates\_Inscricoes.cshtml" />
     <Content Include="Views\Professor\Create.cshtml" />
     <Content Include="Views\Professor\Delete.cshtml" />
     <Content Include="Views\Professor\Details.cshtml" />
     <Content Include="Views\Professor\Edit.cshtml" />
     <Content Include="Views\Professor\Index.cshtml" />
-    <Content Include="Views\Inscricao\CadastrarEstudante.cshtml" />
-    <None Include="Service References\EstudanteService\EstudanteService.wsdl" />
-    <None Include="Service References\EstudanteService\EstudanteService.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Service References\EstudanteService\EstudanteService1.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Service References\EstudanteService\EstudanteService2.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Service References\ProfessorService\ProfessorService.wsdl" />
-    <None Include="Service References\ProfessorService\ProfessorService.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Service References\ProfessorService\ProfessorService1.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Service References\ProfessorService\ProfessorService2.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <Content Include="Views\Shared\Sucesso.cshtml" />
+    <Content Include="Views\Shared\DisplayTemplates\_Cursos.cshtml" />
+    <Content Include="Views\Shared\DisplayTemplates\_Professores.cshtml" />
+    <Content Include="Views\Curso\_ProfessoresSelecionados.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -383,13 +293,18 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <WCFMetadata Include="Service References\" />
-  </ItemGroup>
-  <ItemGroup>
-    <WCFMetadataStorage Include="Service References\CursoService\" />
-    <WCFMetadataStorage Include="Service References\EstudanteService\" />
-    <WCFMetadataStorage Include="Service References\InscricaoService\" />
-    <WCFMetadataStorage Include="Service References\ProfessorService\" />
+    <EmbeddedResource Include="Migrations\201508291504402_InitialCreate.resx">
+      <DependentUpon>201508291504402_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201508291528076_Cursos.resx">
+      <DependentUpon>201508291528076_Cursos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201508291548053_Inscricoes.resx">
+      <DependentUpon>201508291548053_Inscricoes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201508291615386_Professores.resx">
+      <DependentUpon>201508291615386_Professores.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
@@ -407,9 +322,9 @@
         <WebProjectProperties>
           <UseIIS>True</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>1838</DevelopmentServerPort>
+          <DevelopmentServerPort>1333</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:1838/</IISUrl>
+          <IISUrl>http://localhost:1333/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>
